@@ -1,5 +1,7 @@
 package com.hubberspot.mockito.test_doubles.fake;
 
+import com.hubberspot.mockito.test_doubles.dummy.DummyEmailService;
+import com.hubberspot.mockito.test_doubles.dummy.EmailService;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -10,6 +12,7 @@ public class FakeTest {
     @Test
     public void testFake(){
         BookRepository bookRepository = new FakeBookRepository();
+        EmailService emailService = new DummyEmailService();
         BookService bookService = new BookService(bookRepository);
 
         bookService.addBook(new Book("1234", "Mockito in Action", 250, LocalDate.now()));

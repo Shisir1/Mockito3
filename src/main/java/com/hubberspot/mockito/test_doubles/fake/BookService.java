@@ -1,5 +1,7 @@
 package com.hubberspot.mockito.test_doubles.fake;
 
+import com.hubberspot.mockito.test_doubles.dummy.EmailService;
+
 public class BookService {
     private BookRepository bookRepository;
 
